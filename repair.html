@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="form-survey">
+        <div>
+            <label for="name">Siapa nama anda?</label>
+        </div>
+        <input type="text" id="name">
+        <div>
+            <label for="age">Berapa usia anda?</label>
+        </div>
+        <input type="number" id="age">
+        <div>
+            <div>
+                Apa jenis kelamin anda?
+            </div>
+            <input type="radio" id="male" name="gender" value="Laki-laki">
+            <label for="male">Laki-laki</label>
+            <input type="radio" id="female" name="gender" value="Perempuan">
+            <label for="female">Perempuan</label>
+        </div>
+        <div id="ask-smoke">
+            <div>
+                Apakah anda perokok?
+            </div>
+            <input type="radio" id="yes" name="ask" value="Ya">
+            <label for="yes">Ya</label>
+            <input type="radio" id="no" name="ask" value="Tidak">
+            <label for="no">Tidak</label>
+        </div>
+        <div id="list-smoke">
+            <div>
+                Jika anda perokok, rokok apa yang pernah anda coba?
+            </div>
+            <div>
+                <input type="checkbox" value="Gudang Garam Filter">
+                <label for="list1">Gudang Garam Filter</label>
+            </div>
+            <div>
+                <input type="checkbox" value="Lucky Strike">
+                <label for="list2">Lucky Strike</label>
+            </div>
+            <div>
+                <input type="checkbox" value="Marlboro">
+                <label for="list3">Marlboro</label>
+            </div>
+            <div>
+                <input type="checkbox" value="Esse">
+                <label for="list4">Esse</label>
+            </div>
+        </div>
+        <button type="submit" id="button"> Save</button>
+    </form>
+    <table id="table" border="1" style="border-collapse: collapse; margin-top: 20px;">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Gender</th>
+                <th>Is Respondent Smoke</th>
+                <th>Smoke Variant</th>
+            </tr>
+        </thead>
+        <tbody id="insert-data">
+            <tr>
+                <td>Admin</td>
+                <td>28</td>
+                <td>Laki-laki</td>
+                <td>Ya</td>
+                <td>Gudang Garam</td>
+            </tr>
+        </tbody>
+    </table>
+    <script>
+
+        const submitData = document.getElementById("button")
+        submitData.addEventListener("click", processData1);
+        
+        const processData1 = (event) => {
+            document.getElementById("name").innerHTML += event.target.name.value;
+            console.log(processData1)
+        }
+
+        // const processData = (event) => {
+        //     event.preventDefault();
+        //     const database = document.getElementById("insert-data")
+        //     const tableOne = document.createElement("tr")
+        //     const tableTwo = document.createElement("td")
+        //     const name = event.target.name.value;
+        //     const age = event.target.age.value;
+        //     const gender = event.target.gender.value;
+        //     const ask = event.target.ask.value;
+        //     event.appendChild(name)
+        //     event.appendChild(age)
+        //     event.appendChild(gender)
+        //     event.appendChild(ask)
+        // }
+        // const form = document.getElementById("form-survey")
+
+        // nama
+        // const insertName = document.createElement("div")
+        // insertName.textContent = "Siapa nama anda?"
+        // insertName.style.fontFamily = "Helvetica"
+        // const box1 = document.createElement("input")
+        // box1.setAttribute("type", "text")
+
+        // form.appendChild(insertName)
+        // form.appendChild(box1)
+
+        // umur
+        // const insertAge = document.createElement("div")
+        // insertAge.textContent = "Berapa umur anda?"
+        // const box2 = document.createElement("input")
+        // box2.setAttribute("type", "text")
+
+        // form.appendChild(insertAge)
+        // form.appendChild(box2)
+
+        // jenis kelamin
+        // const askGender = document.createElement("div")
+        // askGender.textContent = "Apa jenis kelamin anda?"
+        
+        // const radio1 = document.createElement("input")
+        // radio1.setAttribute("type", "radio")
+        // const radioPlus = document.createElement("label")
+        // const genderMale = document.createTextNode("Laki-laki")
+        // radio1.setAttribute("for", "male")
+        // radio1.setAttribute("id", "male")
+        // radio1.setAttribute("name", "gender")
+
+        // const radio2 = document.createElement("input")
+        // radio2.setAttribute("type", "radio")
+        // const radioMinus = document.createElement("label")
+        // const genderFemale = document.createTextNode("Perempuan")
+        // radio2.setAttribute("for", "female")
+        // radio2.setAttribute("id", "female")
+        // radio2.setAttribute("name", "gender")
+
+        // form.appendChild(askGender)
+        // form.appendChild(radio1)
+        // form.appendChild(genderMale)
+        // form.appendChild(radio2)
+        // form.appendChild(genderFemale)
+
+        // status perokok
+        // const askSmoke = document.createElement("div")
+        // askSmoke.textContent = "Apakah anda perokok?"
+
+        // const radio3 = document.createElement("input")
+        // radio3.setAttribute("type", "radio")
+        // radio3.setAttribute("for", "Ya")
+        // radio3.setAttribute("id", "Yes")
+        // radio3.setAttribute("name", "Ask")
+        // const radioYes = document.createElement("label")
+        // const yes = document.createTextNode("Ya")
+
+        // const radio4 = document.createElement("input")
+        // radio4.setAttribute("type", "radio")
+        // const radioNo = document.createElement("label")
+        // const no = document.createTextNode("Tidak")
+        // radio4.setAttribute("for", "Tidak")
+        // radio4.setAttribute("id", "No")
+        // radio4.setAttribute("name", "Ask")
+
+        // form.appendChild(askSmoke)
+        // form.appendChild(radio3)
+        // form.appendChild(yes)
+        // form.appendChild(radio4)
+        // form.appendChild(no)
+
+        // jenis rokok
+        // const cigarettes = document.createElement("div")
+        // cigarettes.textContent = "Jika anda perokok, rokok apa yang anda pernah coba?"
+
+        // const list1 = document.createElement("div")
+        // const checkbox1 = document.createElement("input")
+        // checkbox1.setAttribute("type", "checkbox")
+        // const cigarettes1 = document.createElement("label")
+        // cigarettes1.textContent = "Gudang Garam Filter"
+        // cigarettes1.setAttribute("for", "Gudang Garam Filter")
+
+        // list1.appendChild(checkbox1)
+        // list1.appendChild(cigarettes1)
+
+        // const list2 = document.createElement("div")
+        // const checkbox2 = document.createElement("input")
+        // checkbox2.setAttribute("type", "checkbox")
+        // const cigarettes2 = document.createElement("label")
+        // cigarettes2.textContent = "Lucky Strike"
+        // cigarettes2.setAttribute("for", "Lucky Strike")
+
+        // list2.appendChild(checkbox2)
+        // list2.appendChild(cigarettes2)
+
+        // const list3 = document.createElement("div")
+        // const checkbox3 = document.createElement("input")
+        // checkbox3.setAttribute("type", "checkbox")
+        // const cigarettes3 = document.createElement("label")
+        // cigarettes3.textContent = "Marlboro" 
+        // cigarettes3.setAttribute("for", "Marlboro")
+
+        // list3.appendChild(checkbox3)
+        // list3.appendChild(cigarettes3)
+
+        // const list4 = document.createElement("div")
+        // const checkbox4 = document.createElement("input")
+        // checkbox4.setAttribute("type", "checkbox")
+        // const cigarettes4 = document.createElement("label")
+        // cigarettes4.textContent = "Esse"
+        // cigarettes4.setAttribute("for", "Esse")
+
+        // list4.appendChild(checkbox4)
+        // list4.appendChild(cigarettes4)
+
+        // form.appendChild(cigarettes)
+        // form.appendChild(list1)
+        // form.appendChild(list2)
+        // form.appendChild(list3)
+        // form.appendChild(list4)
+    </script>
+</body>
+</html>
