@@ -10,6 +10,27 @@
   font-family: poppins-bold;
   src: url(../fonts/Poppins-Bold.ttf);
 }
+@media (max-width: 992px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: start;
+    align-items: start;
+    padding: 30px;
+  }
+  form.form-survey {
+    margin-right: unset;
+  }
+  .wrapper-table {
+    overflow-x: scroll;
+    text-align: center;
+  }
+}
+body {
+  margin: 0;
+  padding: 0;
+}
 :root {
   --basic-color: #468585;
 }
@@ -61,7 +82,7 @@
   color: var(--basic-color);
 }
 .fill {
-  max-width: 250px;
+  max-width: 400px;
   width: 100%;
   padding: 10px;
   border-radius: 10px;
@@ -85,6 +106,7 @@
   padding: 10px !important;
   border: 2px solid #50b498;
   color: #ffff;
+  width: 100%;
 }
 .thead {
   background-color: var(--basic-color);
