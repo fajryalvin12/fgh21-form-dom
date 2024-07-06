@@ -71,26 +71,29 @@ function processData(event) {
   const dataMarl = document.getElementById("marl").checked;
   const dataEsse = document.getElementById("esse").checked;
 
+  let variantChoosen = "";
+
   if (dataGudang === true) {
     const gudang = document.getElementById("gudang");
     const valueGudang = gudang.value;
-    tableVariant.textContent = valueGudang;
+    variantChoosen += valueGudang + ", ";
   }
   if (dataLucky === true) {
     const lucky = document.getElementById("lucky");
     const valueLucky = lucky.value;
-    tableVariant.textContent = valueLucky;
+    variantChoosen += valueLucky + ", ";
   }
   if (dataMarl === true) {
     const marl = document.getElementById("marl");
     const valueMarl = marl.value;
-    tableVariant.textContent = valueMarl;
+    variantChoosen += valueMarl + ", ";
   }
   if (dataEsse === true) {
     const esse = document.getElementById("esse");
     const valueEsse = esse.value;
-    tableVariant.textContent = valueEsse;
+    variantChoosen += valueEsse;
   }
+  tableVariant.textContent = variantChoosen;
 
   tableRow.appendChild(tableName);
   tableRow.appendChild(tableAge);
@@ -98,4 +101,6 @@ function processData(event) {
   tableRow.appendChild(tableSmoke);
   tableRow.appendChild(tableVariant);
   tableBody.appendChild(tableRow);
+
+  form.reset();
 }

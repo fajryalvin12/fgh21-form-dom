@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Mari Mengisi Survey</title>
     <link rel="stylesheet" href="./asset/css/style.css" />
   </head>
   <body>
@@ -11,7 +11,7 @@
       <div>
         <form class="form-survey" id="form-survey">
           <div class="title">
-            <div class="head">Apakah Antum Merokok?</div>
+            <div class="head">Sudahkah Antum Merokok Hari Ini?</div>
             <div class="subhead">
               "Yang sudah mengisi, silakan menyertakan nomor rekeningnya ya"
             </div>
@@ -26,17 +26,21 @@
           <input class="fill" type="number" id="age" />
           <div>
             <div class="gender">Apa jenis kelamin anda?</div>
-            <input type="radio" id="male" name="gender" value="Laki-laki" />
-            <label class="letter" for="male">Laki-laki</label>
-            <input type="radio" id="female" name="gender" value="Perempuan" />
-            <label class="letter" for="female">Perempuan</label>
+            <div class="select">
+              <input type="radio" id="male" name="gender" value="Laki-laki" />
+              <label class="letter" for="male">Laki-laki</label>
+              <input type="radio" id="female" name="gender" value="Perempuan" />
+              <label class="letter" for="female">Perempuan</label>
+            </div>
           </div>
           <div id="ask-smoke">
             <div class="ask-smoke">Apakah anda perokok?</div>
-            <input type="radio" id="yes" name="ask" value="Ya" />
-            <label class="letter" for="yes">Ya</label>
-            <input type="radio" id="no" name="ask" value="Tidak" />
-            <label class="letter" for="no">Tidak</label>
+            <div class="select">
+              <input type="radio" id="yes" name="ask" value="Ya" />
+              <label class="letter" for="yes">Ya</label>
+              <input type="radio" id="no" name="ask" value="Tidak" />
+              <label class="letter" for="no">Tidak</label>
+            </div>
           </div>
           <div id="list-smoke">
             <div class="list-smoke">
@@ -59,7 +63,9 @@
               <label class="letter" for="esse">Esse</label>
             </div>
           </div>
-          <button class="button" type="submit" id="button">Save</button>
+          <button class="button" type="submit" id="button">
+            <span>Save 🗿 </span>
+          </button>
         </form>
       </div>
       <div class="wrapper-table">

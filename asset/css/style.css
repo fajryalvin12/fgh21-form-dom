@@ -26,13 +26,23 @@
     overflow-x: scroll;
     text-align: center;
   }
+  .select {
+    display: flex;
+    align-items: center;
+  }
+  .button:hover {
+    background-color: #9cdba6;
+    color: #50b498;
+  }
 }
 body {
   margin: 0;
   padding: 0;
+  background-image: url(../images/cigar.jpg);
+  object-fit: cover;
 }
 :root {
-  --basic-color: #468585;
+  --primary: #468585;
 }
 .container {
   justify-content: center;
@@ -79,11 +89,10 @@ body {
 }
 .letter {
   font-family: poppins;
-  color: var(--basic-color);
+  color: var(--primary);
 }
 .fill {
   max-width: 400px;
-  width: 100%;
   padding: 10px;
   border-radius: 10px;
   border: transparent;
@@ -93,13 +102,41 @@ body {
   width: 100%;
   font-family: poppins-semibold;
   letter-spacing: 1px;
-  font-size: 18px;
+  font-size: 24px;
   padding: 20px;
   margin-top: 20px;
   border-radius: 10px;
   border: transparent;
-  background-color: var(--basic-color);
+  background-color: var(--primary);
   color: #ffff;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+.button:hover {
+  background-color: #9cdba6;
+  color: #50b498;
+}
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+.button span:after {
+  content: "\00bb";
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -100px;
+  transition: 0.5s;
+}
+.button:hover span {
+  padding-right: 25px;
+}
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
 }
 .table {
   font-family: poppins;
@@ -109,14 +146,14 @@ body {
   width: 100%;
 }
 .thead {
-  background-color: var(--basic-color);
+  background-color: var(--primary);
   font-size: 18px;
   font-family: poppins-bold;
 }
 .tbody {
   background-color: #def9c4;
   font-family: poppins-semibold;
-  color: var(--basic-color);
+  color: var(--primary);
 }
 th {
   padding: 10px;
