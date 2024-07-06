@@ -1,0 +1,41 @@
+@font-face {
+  font-family: poppins;
+  src: url(../fonts/Poppins-Regular.ttf);
+}
+@font-face {
+  font-family: poppins-semibold;
+  src: url(../fonts/Poppins-SemiBold.ttf);
+}
+@font-face {
+  font-family: poppins-bold;
+  src: url(../fonts/Poppins-Bold.ttf);
+}
+
+.container {
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  padding: 100px;
+  align-items: center;
+}
+.form-survey {
+  background-color: aqua;
+  color: #000;
+  border: transparent;
+  border-radius: 15px;
+  padding: 20px;
+}
+.name,
+.age,
+.gender,
+.ask-smoke,
+.list-smoke {
+  font-family: poppins-semibold;
+  font-size: 18px;
+}
+.table {
+  font-family: poppins;
+}
+.letter {
+  font-family: poppins;
+}

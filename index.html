@@ -4,50 +4,52 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./asset/css/style.css" />
   </head>
   <body>
     <div class="container">
-      <form id="form-survey">
+      <form class="form-survey" id="form-survey">
         <div class="name">
           <label for="name">Siapa nama anda?</label>
         </div>
-        <input type="text" id="name" />
+        <input type="letter" id="name" />
         <div class="age">
           <label for="age">Berapa usia anda?</label>
         </div>
         <input type="number" id="age" />
-        <div class="gender">
-          <div>Apa jenis kelamin anda?</div>
+        <div>
+          <div class="gender">Apa jenis kelamin anda?</div>
           <input type="radio" id="male" name="gender" value="Laki-laki" />
-          <label for="male">Laki-laki</label>
+          <label class="letter" for="male">Laki-laki</label>
           <input type="radio" id="female" name="gender" value="Perempuan" />
-          <label for="female">Perempuan</label>
+          <label class="letter" for="female">Perempuan</label>
         </div>
-        <div class="ask-smoke" id="ask-smoke">
-          <div>Apakah anda perokok?</div>
+        <div id="ask-smoke">
+          <div class="ask-smoke">Apakah anda perokok?</div>
           <input type="radio" id="yes" name="ask" value="Ya" />
-          <label for="yes">Ya</label>
+          <label class="letter" for="yes">Ya</label>
           <input type="radio" id="no" name="ask" value="Tidak" />
-          <label for="no">Tidak</label>
+          <label class="letter" for="no">Tidak</label>
         </div>
-        <div class="list-smoke" id="list-smoke">
-          <div>Jika anda perokok, rokok apa yang pernah anda coba?</div>
+        <div id="list-smoke">
+          <div class="list-smoke">
+            Jika anda perokok, rokok apa yang pernah anda coba?
+          </div>
           <div>
             <input id="gudang" type="checkbox" value="Gudang Garam Filter" />
-            <label for="list1">Gudang Garam Filter</label>
+            <label class="letter" for="list1">Gudang Garam Filter</label>
           </div>
           <div>
             <input id="lucky" type="checkbox" value="Lucky Strike" />
-            <label for="list2">Lucky Strike</label>
+            <label class="letter" for="list2">Lucky Strike</label>
           </div>
           <div>
             <input id="marl" type="checkbox" value="Marlboro" />
-            <label for="list3">Marlboro</label>
+            <label class="letter" for="list3">Marlboro</label>
           </div>
           <div>
             <input id="esse" type="checkbox" value="Esse" />
-            <label for="list4">Esse</label>
+            <label class="letter" for="list4">Esse</label>
           </div>
         </div>
         <button type="submit" id="button">Save</button>
@@ -56,6 +58,7 @@
         id="table"
         border="1"
         style="border-collapse: collapse; margin-top: 20px"
+        class="table"
       >
         <thead>
           <tr>
@@ -77,7 +80,7 @@
         </tbody>
       </table>
     </div>
-    <script src="./js/main.js"></script>
+    <script src="./asset/js/main.js"></script>
     <script>
       // const form = document.getElementById("form-survey")
 
