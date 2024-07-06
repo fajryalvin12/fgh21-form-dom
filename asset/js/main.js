@@ -21,7 +21,7 @@ function processData(event) {
   tableName.textContent = valueName;
 
   if (valueName === "") {
-    window.alert("isi dulu abangku");
+    window.alert("nama ente siapa woi?");
     return;
   }
 
@@ -31,7 +31,7 @@ function processData(event) {
   tableAge.textContent = valueAge;
 
   if (valueAge === "") {
-    window.alert("umurmu berapa cok?");
+    window.alert("dah bagus nulis nama, masa umur sendiri lupa?");
     return;
   }
 

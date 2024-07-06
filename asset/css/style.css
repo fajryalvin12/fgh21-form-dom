@@ -14,16 +14,35 @@
 .container {
   justify-content: center;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   padding: 100px;
   align-items: center;
 }
 .form-survey {
-  background-color: aqua;
+  background-color: #def9c4;
   color: #000;
   border: transparent;
   border-radius: 15px;
   padding: 20px;
+  margin-right: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.title {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #50b498;
+}
+.head {
+  font-family: poppins-bold;
+  font-size: 24px;
+}
+.subhead {
+  font-family: poppins-semibold;
+  font-size: 18px;
 }
 .name,
 .age,
@@ -32,10 +51,31 @@
 .list-smoke {
   font-family: poppins-semibold;
   font-size: 18px;
+  color: #50b498;
 }
 .table {
   font-family: poppins;
 }
 .letter {
   font-family: poppins;
+  color: #468585;
+}
+.fill {
+  max-width: 250px;
+  width: 100%;
+  padding: 5px;
+  border-radius: 10px;
+  border: transparent;
+  font-family: poppins;
+}
+.button {
+  width: 100%;
+  font-family: poppins-semibold;
+  letter-spacing: 1px;
+  padding: 10px;
+  margin-top: 20px;
+  border-radius: 10px;
+  border: transparent;
+  background-color: #468585;
+  color: #9cdba6;
 }

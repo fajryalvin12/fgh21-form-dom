@@ -9,14 +9,18 @@
   <body>
     <div class="container">
       <form class="form-survey" id="form-survey">
+        <div class="title">
+          <div class="head">Survey Membuktikan</div>
+          <div class="subhead">Yang sudah mengisi, silakan mengisi lagi ya</div>
+        </div>
         <div class="name">
           <label for="name">Siapa nama anda?</label>
         </div>
-        <input type="letter" id="name" />
+        <input class="fill" type="letter" id="name" />
         <div class="age">
           <label for="age">Berapa usia anda?</label>
         </div>
-        <input type="number" id="age" />
+        <input class="fill" type="number" id="age" />
         <div>
           <div class="gender">Apa jenis kelamin anda?</div>
           <input type="radio" id="male" name="gender" value="Laki-laki" />
@@ -37,22 +41,22 @@
           </div>
           <div>
             <input id="gudang" type="checkbox" value="Gudang Garam Filter" />
-            <label class="letter" for="list1">Gudang Garam Filter</label>
+            <label class="letter" for="gudang">Gudang Garam Filter</label>
           </div>
           <div>
             <input id="lucky" type="checkbox" value="Lucky Strike" />
-            <label class="letter" for="list2">Lucky Strike</label>
+            <label class="letter" for="lucky">Lucky Strike</label>
           </div>
           <div>
             <input id="marl" type="checkbox" value="Marlboro" />
-            <label class="letter" for="list3">Marlboro</label>
+            <label class="letter" for="marl">Marlboro</label>
           </div>
           <div>
             <input id="esse" type="checkbox" value="Esse" />
-            <label class="letter" for="list4">Esse</label>
+            <label class="letter" for="esse">Esse</label>
           </div>
         </div>
-        <button type="submit" id="button">Save</button>
+        <button class="button" type="submit" id="button">Save</button>
       </form>
       <table
         id="table"
